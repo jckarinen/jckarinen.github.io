@@ -1,0 +1,15 @@
+button {
+    box-sizing: border-box;
+    background: var(--lgy);
+
+    line-height: 22px;
+    font-size: 16px;
+}
+
+button:active {
+    filter: brightness(0.87);
+}
+
+button:hover {
+    /*color: var(--blu);*/
+}

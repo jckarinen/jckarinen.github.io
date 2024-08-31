@@ -1,0 +1,111 @@
+
+
+#play-window {
+    position: relative;
+    height: 250px;
+    margin: 20px;
+    background: var(--blk);
+    overflow: hidden;
+}
+
+#play-btn {
+    /* How does this work? */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    font-size: 48px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+#play-btn:hover {
+    /* TODO add hover effect for button */
+}
+
+#play-controls {
+    width: max-content;
+    position: absolute;
+    left: 80%;
+    top: 60%;
+    /*transform: translate(-50%, -50%);*/
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    font-size: 0; /* No idea why this fixes the gap and I did it by accident lol */
+    z-index: 1;
+
+}
+
+@media (max-width: 1000px) {
+    #play-controls {
+        top: 65%;
+        left: 65%;
+    }
+}
+
+#play-controls button {
+    opacity: 0.40;
+    min-width: 40px;
+    min-height: 40px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+#play-scene {
+    position: relative;
+    height: 100%;
+    background: var(--spc);
+}
+
+#player {
+    font-size: 19px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--wht);
+}
+
+#player, .enemy {
+    /*z-index: -1;*/
+    width: max-content;
+}
+
+.flipLeft {
+    transform: scaleX(-1);
+}
+
+.flipRight {
+    transform: scaleX(1);
+}
+
+.pellet {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 2px;
+    background: var(--wht);
+}
+
+.enemy {
+    position: absolute;
+    color: var(--ylw);
+}
+
+#winner {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: var(--owt);
+}

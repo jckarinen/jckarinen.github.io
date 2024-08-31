@@ -1,0 +1,74 @@
+:root {
+    --red: #e35f5f;
+    --ylw: #dfe300;
+    --blu: #394dcd;
+    --grn: #208c71;
+    --gry: #6c6c6c;
+    --lgy: #c6c6c6;
+    --owt: #dedede;
+    --wht: #efefef;
+    --spc: #0e1d56;
+    --blk: #000000;
+}
+
+@font-face {
+    font-family: 'w95fa';
+    src: url("../fonts/w95fa.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: w95fa, sans-serif;
+    font-weight: normal;
+}
+
+html {
+    background: var(--blk);
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    text-align: center;
+    /*margin: 40px 20%;*/
+    margin: 30px 20%;
+    background: var(--lgy);
+    color: var(--blk);
+
+    border-top: 4px solid var(--wht);
+    border-left: 4px solid var(--wht);
+    border-bottom: 3px solid var(--blu);
+    border-right: 3px solid var(--blu);
+}
+
+main {
+    /*flex: 1;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a::before {
+    content: '-> ';
+}
+
+a::after {
+    content: ' <-';
+}
+
+
+button, .border-retro {
+    border-top: 2px solid var(--wht);
+    border-left: 2px solid var(--wht);
+    border-bottom: 2px solid var(--blk);
+    border-right: 2px solid var(-blk);
+}

@@ -5,77 +5,131 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Cool Website</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/list.css">
+    <link rel="stylesheet" type="text/css" href="styles/schedule.css">
+    <link rel="stylesheet" type="text/css" href="styles/button.css">
+    <link rel="stylesheet" type="text/css" href="styles/banner.css">
+    <link rel="stylesheet" type="text/css" href="styles/play.css">
 </head>
 <body>
 
-<h1>Jamie Karinen</h1>
-<h2>(c28r873)</h2>
-<a href="https://jckarinen.github.io">My GitHub Pages site</a>
-<h2>My Class Schedule</h2>
-<table>
-    <tr>
-        <th scope="col"></th>
-        <th scope="col">Monday</th>
-        <th scope="col">Tuesday</th>
-        <th scope="col">Wednesday</th>
-        <th scope="col">Thursday</th>
-        <th scope="col">Friday</th>
-    </tr>
-    <tr>
-        <th scope="row">09:00</th>
-        <td></td>
-        <td>CSCI 351</td>
-        <td></td>
-        <td>CSCI 351</td>
-        <td></td>
-    </tr>
-    <tr>
-        <th scope="row">10:00</th>
-    </tr>
-    <tr>
-        <th scope="row">11:00</th>
-    </tr>
-    <tr>
-        <th scope="row">12:00</th>
-        <td>CSCI 466</td>
-        <td></td>
-        <td>CSCI 466</td>
-        <td></td>
-        <td>CSCI 466</td>
-    </tr>
-    <tr>
-        <th scope="row">13:10</th>
-        <td>CSCI 331</td>
-        <td></td>
-        <td>CSCI 331</td>
-        <td></td>
-        <td>CSCI 331</td>
-    </tr>
-    <tr>
-        <th scope="row">14:10</th>
-        <td>CSCI 440</td>
-        <td>CSCI 491</td>
-        <td>CSCI 440</td>
-        <td>CSCI 491</td>
-        <td>CSCI 440</td>
-    </tr>
-    <tr>
-        <th scope="row">15:10</th>
-        <td></td>
-        <td>CSCI 476</td>
-        <td></td>
-        <td>CSCI 476</td>
-        <td></td>
-    </tr>
-</table>
-<h2>Previous Courses</h2>
-<ul>
-    <li>CS 145RA</li>
-    <li>CSCI 366</li>
-    <li>ESOF 322</li>
-    <li>STAT 337</li>
-</ul>
+<header>
+    <div id="banner">
+        <div class="color-block" id="yellow"></div>
+        <div class="color-block" id="red"></div>
+        <div class="color-block" id="green"></div>
+    </div>
+    <h1>Jamie Karinen</h1>
+</header>
 
+<main>
+    <h2>NetID: c28r873</h2>
+    <a href="https://jckarinen.github.io"><button>My GitHub Pages Site</button></a>
+    <h2>My Schedule</h2>
+    <button id="show-schedule-btn" onclick="showSchedule()">Show Schedule</button>
+    <div id="schedule-window">
+        <table>
+            <caption id="schedule-caption">
+                Schedule
+                <button id="close-btn" onclick="hideSchedule()">X</button>
+            </caption>
+            <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+            </tr>
+            <tr>
+                <th scope="row">09:00</th>
+                <td></td>
+                <td>CSCI 351</td>
+                <td></td>
+                <td>CSCI 351</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">10:00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">11:00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">12:00</th>
+                <td>CSCI 466</td>
+                <td></td>
+                <td>CSCI 466</td>
+                <td></td>
+                <td>CSCI 466</td>
+            </tr>
+            <tr>
+                <th scope="row">13:10</th>
+                <td>CSCI 331</td>
+                <td></td>
+                <td>CSCI 331</td>
+                <td></td>
+                <td>CSCI 331</td>
+            </tr>
+            <tr>
+                <th scope="row">14:10</th>
+                <td>CSCI 440</td>
+                <td>CSCI 491</td>
+                <td>CSCI 440</td>
+                <td>CSCI 491</td>
+                <td>CSCI 440</td>
+            </tr>
+            <tr>
+                <th scope="row">15:10</th>
+                <td></td>
+                <td>CSCI 476</td>
+                <td></td>
+                <td>CSCI 476</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Previous Courses</h2>
+    <ul>
+        <li>CS 145RA</li>
+        <li>CSCI 366</li>
+        <li>ESOF 322</li>
+        <li>STAT 337</li>
+    </ul>
+
+    <div id="play-window">
+        <button id="play-btn" onclick="play()">></button>
+        <div id="play-controls">
+            <div id="control-row-1">
+                <button id="control-up">W</button>
+            </div>
+            <div id="control-row-2">
+                <button id="control-left">A</button>
+                <button id="control-down">S</button>
+                <button id="control-right">D</button>
+            </div>
+        </div>
+        <div id="play-scene">
+            <div id="player">><></div>
+            <h2 id="winner">WINNER!</h2>
+        </div>
+    </div>
+</main>
+
+
+<script src="scripts/index.js"></script>
+<script src="scripts/play.js"></script>
 </body>
 </html>
