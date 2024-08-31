@@ -1,4 +1,4 @@
-button {
+button, input[type="submit"] {
     box-sizing: border-box;
     background: var(--lgy);
 
@@ -6,10 +6,7 @@ button {
     font-size: 16px;
 }
 
-button:active {
+button:active, input[type="submit"]:active {
     filter: brightness(0.87);
 }
 
-button:hover {
-    /*color: var(--blu);*/
-}

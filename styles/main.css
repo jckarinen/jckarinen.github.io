@@ -45,10 +45,6 @@ body {
     border-right: 3px solid var(--blu);
 }
 
-main {
-    /*flex: 1;*/
-}
-
 a {
     text-decoration: none;
 }
@@ -57,18 +53,9 @@ a:visited {
     color: inherit;
 }
 
-a::before {
-    content: '-> ';
-}
-
-a::after {
-    content: ' <-';
-}
-
-
-button, .border-retro {
+button, input[type="submit"], .border-retro {
     border-top: 2px solid var(--wht);
     border-left: 2px solid var(--wht);
     border-bottom: 2px solid var(--blk);
-    border-right: 2px solid var(-blk);
+    border-right: 2px solid var(--blk);
 }
