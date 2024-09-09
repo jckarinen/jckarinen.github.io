@@ -1,0 +1,42 @@
+/* style the root of the document (html) to have a background color
+based on a color from the image (try the color picker in the form). */
+html {
+    background: black;
+}
+
+/* Give the body a white background, a 10 pixel solid gold border,
+and 3 rems (relative ems) of padding. Set the margin to auto to
+center the body in the browser window. Put 20 pixels of margin on top.  */
+body {
+    background: white;
+    border: 10px solid gold;
+    padding: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Make the h1 element centered and colored 'firebrick' red. */
+h1 {
+    text-align: center;
+    color: firebrick;
+}
+
+/* The image should have a 50% border radius to make it an ellipse.
+Make the width of the image 75% smaller, and center it.
+(To center an image, you can use the margin:auto trick from
+above, but you will also need to set the display to block.)  */
+img {
+    border-radius: 50%;
+    width: 75%;
+    display: block;
+    margin: auto;
+}
+
+/* The "special" class should have a background color of gold.
+Just the paragraph marked "special" should have double the
+relative font size (ie: 2rem) as well the gold bkgd. */
+.special {
+    background: gold;
+    font-size: 2rem;
+}
